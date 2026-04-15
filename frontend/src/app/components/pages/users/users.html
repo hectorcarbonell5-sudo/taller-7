@@ -1,1 +1,75 @@
-<p>users works!</p>
+<div class="container mt-5" style="max-width: 500px;">
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <h3 class="fw-bold mb-4 text-center">Crear Usuario</h3>
+
+      <form (ngSubmit)="createUser()" #form="ngForm">
+
+        <!-- Nombre -->
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            name="name"
+            [(ngModel)]="newUser.name"
+            required
+            placeholder="Nombre completo">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            name="email"
+            [(ngModel)]="newUser.email"
+            required
+            placeholder="correo@ejemplo.com">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Contraseña</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            name="password"
+            [(ngModel)]="newUser.password"
+            required
+            placeholder="••••••••">
+        </div>
+
+        
+
+        <!-- Botón -->
+        <div class="d-grid">
+          <button 
+            type="submit" 
+            class="btn btn-danger"
+            [disabled]="form.invalid">
+            Crear Usuario
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Mensaje -->
+       @if (message){
+        <div class="alert alert-success mt-3">
+          {{ message }}
+        </div>
+      }
+      
+      @if (error){
+      <div class="alert alert-danger mt-3">
+        {{ error }}
+      </div>
+      }
+
+    </div>
+  </div>
+</div>
+
