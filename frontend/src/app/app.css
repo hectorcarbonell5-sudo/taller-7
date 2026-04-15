@@ -1,0 +1,31 @@
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 70px 1fr 50px;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: end;
+  background-color: #f10808;
+}
+
+/* Content */
+.content {
+  grid-column: 2;
+  overflow-y: auto;
+}
+
+/* Footer */
+.footer {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #003366;
+}

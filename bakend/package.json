@@ -1,0 +1,32 @@
+{
+   "name": "taller-7",
+   "version": "1.0.0",
+   "type": "module",
+   "main": "src/server.js",
+   "scripts": {
+      "start": "node src/server.js",
+      "dev": "nodemon src/server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/hectorcarbonell5-sudo/taller-7.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/hectorcarbonell5-sudo/taller-7/issues"
+   },
+   "homepage": "https://github.com/hectorcarbonell5-sudo/taller-7#readme",
+   "dependencies": {
+      "cors": "^2.8.6",
+      "dotenv": "^17.4.2",
+      "express": "^5.2.1",
+      "mongoose": "^9.4.1"
+   },
+   "devDependencies": {
+      "morgan": "^1.10.1",
+      "nodemon": "^3.1.14"
+   }
+}
